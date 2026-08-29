@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#173521">
+<title>Mountain Drive Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="experience">
+  <svg id="scene" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#071329"/>
+        <stop offset=".52" stop-color="#10294a"/>
+        <stop offset="1" stop-color="#263a35"/>
+      </linearGradient>
+      <linearGradient id="mountain1" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#294a58"/><stop offset="1" stop-color="#172f3a"/>
+      </linearGradient>
+      <linearGradient id="mountain2" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#193944"/><stop offset="1" stop-color="#0d262e"/>
+      </linearGradient>
+      <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+        <stop stop-color="#244637"/><stop offset="1" stop-color="#10251f"/>
+      </linearGradient>
+      <filter id="softShadow"><feGaussianBlur stdDeviation="7"/></filter>
+      <filter id="moonGlow" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="13" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <g id="world">
+    <rect x="-400" y="-200" width="1800" height="1100" fill="url(#sky)"/>
+    <circle cx="810" cy="92" r="72" fill="#d9ebff" opacity=".12" filter="url(#moonGlow)"/>
+    <circle cx="810" cy="92" r="43" fill="#eaf4ff" opacity=".98" filter="url(#moonGlow)"/>
+    <circle cx="810" cy="92" r="34" fill="#f8fbff" opacity=".98"/>
+    <circle cx="798" cy="82" r="5" fill="#d8e3f1" opacity=".55"/>
+    <circle cx="821" cy="103" r="7" fill="#d8e3f1" opacity=".42"/><g opacity=".18" fill="#dbe9ff" class="clouds">
+      <path d="M75 100c22-35 78-35 98 0 18-25 64-18 70 14H55c-5-7 7-12 20-14z"/>
+      <path d="M580 72c18-32 65-34 86-4 28-18 75-1 75 30H555c-3-12 9-21 25-26z"/>
+      <path d="M320 180c15-23 53-25 70-4 20-12 51 2 51 23H300c0-9 8-16 20-19z"/>
+    </g>
+
+    <path d="M0 430L150 280 270 400 405 210 550 380 705 170 820 350 1000 220V700H0Z" fill="url(#mountain1)"/>
+    <path d="M0 505L170 360 310 470 470 290 620 455 770 260 1000 420V700H0Z" fill="url(#mountain2)"/>
+    <path d="M0 540c160-65 240-32 350-68 160-51 254-14 365-72 102-53 171-20 285-56v356H0Z" fill="url(#ground)"/>
+
+    <g fill="#0b211b">
+      <path d="M70 535l18-48 18 48h-9l12 26H58l12-26z"/>
+      <path d="M118 540l17-44 17 44h-8l11 25h-40l11-25z"/>
+      <path d="M172 526l20-55 20 55h-10l13 29h-46l13-29z"/>
+      <path d="M830 500l17-45 17 45h-8l11 25h-40l11-25z"/>
+      <path d="M882 525l20-53 20 53h-10l13 29h-46l13-29z"/>
+      <path d="M932 500l17-44 17 44h-8l11 25h-40l11-25z"/>
+    </g>
+
+    <!-- Fixed road -->
+    <path d="M-50 625 C 145 560, 370 620, 535 540 S 720 405, 590 355 S 420 275, 545 235 S 770 180, 1050 215"
+          fill="none" stroke="#4b3c31" stroke-width="176" stroke-linecap="round" stroke-linejoin="round"/>
+    <path id="roadPath"
+          d="M-50 625 C 145 560, 370 620, 535 540 S 720 405, 590 355 S 420 275, 545 235 S 770 180, 1050 215"
+          fill="none" stroke="#4d4f50" stroke-width="160" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-50 625 C 145 560, 370 620, 535 540 S 720 405, 590 355 S 420 275, 545 235 S 770 180, 1050 215"
+          fill="none" stroke="#d8d5bb" stroke-width="5" stroke-dasharray="38 28" stroke-linecap="round"/>
+    <path d="M-50 545 C 140 482, 365 545, 520 468 S 695 350, 565 282 S 415 212, 540 165"
+          fill="none" stroke="#9fa89a" stroke-opacity=".55" stroke-width="4"/>
+
+    <g fill="#fff" opacity=".7">
+      <ellipse cx="160" cy="645" rx="45" ry="7"/>
+      <ellipse cx="820" cy="265" rx="38" ry="6"/>
+    </g>
+    <g fill="#eaf3ff" opacity=".8">
+      <circle cx="120" cy="95" r="2"/><circle cx="205" cy="52" r="1.6"/><circle cx="385" cy="86" r="1.5"/><circle cx="505" cy="42" r="2"/><circle cx="690" cy="125" r="1.6"/><circle cx="930" cy="65" r="1.8"/><circle cx="760" cy="48" r="1.2"/><circle cx="330" cy="125" r="1.2"/>
+    </g>
+    </g>
+  </svg>
+
+  <div class="scene-shade"></div>
+
+  <header class="topbar">
+    <div class="brand" contenteditable="true" data-edit-key="brand">ALKA / PORTFOLIO</div>
+    <div class="status"><i id="statusDot"></i><span id="statusText" contenteditable="true" data-edit-key="status">BRAKED</span></div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow" contenteditable="true" data-edit-key="eyebrow">A PORTFOLIO JOURNEY</p>
+    <h1 contenteditable="true" data-edit-key="heroTitle">Drive through<br><em>my story.</em></h1>
+    <p contenteditable="true" data-edit-key="heroCopy">Press START ENGINE and let the journey begin. Stop anywhere to explore a resume chapter.</p>
+  </section>
+
+  <div id="signLayer"></div>
+
+  <div id="carShadow"></div>
+  <div id="car" aria-label="portfolio car">
+    <div class="car-roof"></div><div class="window back"></div><div class="window front"></div>
+    <div class="body"></div><div class="bumper"></div>
+    <div class="wheel w1"></div><div class="wheel w2"></div>
+    <div class="light l1"></div><div class="light l2"></div>
+  </div>
+
+  <aside id="card" class="card" aria-live="polite">
+    <div class="card-head"><span id="cardNo">01</span><button id="closeCard" aria-label="Close">×</button></div>
+    <p id="cardKicker" contenteditable="true">ABOUT ME</p>
+    <h2 id="cardTitle" contenteditable="true">The person behind the work.</h2>
+    <div id="cardBody" class="card-body" contenteditable="true">I am a Computer Science graduate building a career around data, analytical thinking and practical problem solving.</div>
+    <button id="mobileDetailsButton" class="mobile-details-button" type="button">VIEW DETAILS</button>
+    <div class="card-foot"><span contenteditable="true" data-edit-key="cardFooter">CONTENT</span><span class="bar"><i id="progressBar"></i></span></div>
+  </aside>
+
+  <div class="chapter"><small contenteditable="true" data-edit-key="marker">CURRENT BOARD</small><strong id="chapterName">START</strong></div>
+
+  <div class="drive-controls">
+    <button id="signalButton" class="start">START/STOP</button>
+  </div>
+  <div class="bottom-note" contenteditable="true" data-edit-key="bottom">MOUNTAIN ROUTE / PORTFOLIO</div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
